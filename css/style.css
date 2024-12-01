@@ -705,6 +705,31 @@ footer p{
     width: 50px;
 }
 
+.news-hero{
+    text-align: center;
+}
+.news-hero .currentpage {
+    color: #b15b00;
+}
+
+.news-hero .search-bar{
+    position: relative;
+}
+
+.news-hero .search-bar input{
+    margin-top: 50px;
+    padding: 10px 10px 10px 40px;
+    border-radius: 10px;
+    background: #1C140F;
+    border: 0;
+    
+}
+
+.news-hero .search .search-bar .search-icon{
+    position: absolute;
+    padding-left: 600px;
+    padding-top: 58px;
+}
 
 
 
