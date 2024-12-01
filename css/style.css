@@ -822,5 +822,67 @@ footer p{
     background: #9921C3;
 }
 
+.contacts-hero{
+    text-align: center;
+    padding: 40px 0;
+}
+
+.contacts-hero .currentpage {
+    color: #b15b00;
+}
+.contacts-hero h1{
+    padding: 20px 0;
+}
+
+.contacts-hero p {
+    padding-bottom: 100px;
+    font-weight: 300;
+}
+
+.our-contacts{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.our-contacts .vertical-line {
+    border-left: solid 1px white;
+}
+
+.our-contacts .follow{
+    width: 20%;
+}
+
+.our-contacts .follow img {
+    margin-top: 20px;
+    background: #1C140F;
+    padding: 10px 10px;
+    border-radius: 12px;
+}
+
+.our-contacts .number{
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+
+.our-contacts .number p{
+    padding-left: 20px;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.our-contacts .location{
+    display: flex;
+    align-items: center;
+    font-weight: 200;
+    font-size: 20px;
+    
+    width: 20%;
+}
+
+.our-contacts .location p{
+    padding-left: 20px;
+}
 
 
