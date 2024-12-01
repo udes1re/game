@@ -843,6 +843,7 @@ footer p{
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    margin-bottom: 100px;
 }
 
 .our-contacts .vertical-line {
@@ -884,5 +885,111 @@ footer p{
 .our-contacts .location p{
     padding-left: 20px;
 }
+
+.sayhello{
+    background: url(/img/contact-bg.png);
+    padding-top: 20px;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+
+.sayhello h2, .sayhello p{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.sayhello .field-group {
+    display: flex;
+    flex-direction: column; /* Лейбл сверху, инпут снизу */
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    margin: 0 auto;
+    
+}
+
+.sayhello .full-name input{
+    width: 100%;
+    
+    
+}
+.sayhello .full-name {
+    display: flex;
+    flex-direction: row;
+}
+
+.sayhello .full-name .fname{
+    display: flex;
+    flex-direction: column;
+}
+.sayhello .full-name .lname{
+    display: flex;
+    flex-direction: column;
+    margin-left: 120px;
+}
+
+
+.sayhello .field-group label {
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #b3b3b3;
+}
+
+.sayhello input, 
+.sayhello textarea {
+    background:rgba(255, 255, 255, 0.07);
+    color: #fff;
+    border: 1px solid #cecece64;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+.sayhello textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Кнопка */
+.sayhello .btn {
+    width: 11%;
+    margin-right: 30%;
+    background-color: #FA9021;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color .2s ease;
+    margin-top: 20px;
+}
+
+.sayhello .btn:hover {
+    background-color: #b15b00;
+}
+
+.sayhello .orange{
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 1;
+}
+
+.sayhello .white{
+    position: absolute;
+    bottom:0;
+    z-index: 1;
+}
+
+
+
 
 
