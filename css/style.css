@@ -705,7 +705,286 @@ footer p{
     width: 50px;
 }
 
+.news-hero{
+    text-align: center;
+}
+.news-hero .currentpage {
+    color: #b15b00;
+}
+
+.news-hero .search-bar{
+    position: relative;
+}
+
+.news-hero .search-bar input{
+    margin-top: 50px;
+    padding: 10px 10px 10px 40px;
+    border-radius: 10px;
+    background: #1C140F;
+    border: 0;
+    color: #fff;
+    outline: none;
+    
+}
+
+.news-hero .search .search-bar .search-icon{
+    position: absolute;
+    padding-left: 600px;
+    padding-top: 58px;
+}
+
+.news-info{
+    padding-top: 100px;;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.news-info .big-blocks{
+    width: 45%;
+    padding-top: 26px;
+   
+}
+.news-info .big-blocks hr{
+    margin: 100px auto;
+    color: #A5A5A5;
+    height: 0.7px;
+    
+}
+.news-info .big-blocks .big-block{
+    display: flex;
+    flex-wrap:wrap;
+    margin-top: 45px;
+}
+.news-info .big-blocks .big-block .blue{
+    background:#2351F5 ;
+    padding: 5px 5px;
+    margin-top: 30px;
+}
+
+.news-info .big-blocks .big-block span:not(.blue){
+    margin-top: 35px;
+    padding-left: 10px;
+}
+
+.news-info .big-blocks .big-block h2{
+    font-size: 30px;
+    font-weight: 500;
+    padding-top: 30px;
+}
+.news-info .big-blocks .big-block p{
+    padding-top: 40px;
+    font-size: 17px;
+    line-height: 207.8%;
+}
+.news-info .small-blocks{
+  width: 45%;
+}
+.news-info .small-blocks .small-block{
+    display: flex;
+    margin-top: 70px;
+}
+
+.news-info .small-blocks .small-block h3{
+    font-weight: 500;
+    font-size: 23px;
+    padding-top: 30px;
+}
+
+.news-info .small-blocks .small-block .info{
+    padding:20px 20px
+    
+}
+.news-info .small-blocks .small-block .colored{
+    padding: 10px 10px;
+    margin-right: 5px;
+}
+.news-info .small-blocks .small-block:first-of-type .colored {
+    background:#FF8484;
+}
+
+.news-info .small-blocks .small-block:nth-of-type(2) .colored {
+    background:#2351F5;
+}
+.news-info .small-blocks .small-block:nth-of-type(3) .colored{
+    background: #FF7C32;
+}
+.news-info .small-blocks .small-block:nth-of-type(4) .colored{
+    background: #2351F5;
+}
+.news-info .small-blocks .small-block:nth-of-type(5) .colored{
+    background: #23A54F;
+}
+
+.news-info .small-blocks .small-block:nth-of-type(6) .colored{
+    background: #2351F5;
+}
+.news-info .small-blocks .small-block:nth-of-type(7) .colored {
+    background: #9921C3;
+}
+
+.contacts-hero{
+    text-align: center;
+    padding: 40px 0;
+}
+
+.contacts-hero .currentpage {
+    color: #b15b00;
+}
+.contacts-hero h1{
+    padding: 20px 0;
+}
+
+.contacts-hero p {
+    padding-bottom: 100px;
+    font-weight: 300;
+}
+
+.our-contacts{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.our-contacts .vertical-line {
+    border-left: solid 1px white;
+}
+
+.our-contacts .follow{
+    width: 20%;
+}
+
+.our-contacts .follow img {
+    margin-top: 20px;
+    background: #1C140F;
+    padding: 10px 10px;
+    border-radius: 12px;
+}
+
+.our-contacts .number{
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+
+.our-contacts .number p{
+    padding-left: 20px;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.our-contacts .location{
+    display: flex;
+    align-items: center;
+    font-weight: 200;
+    font-size: 20px;
+    
+    width: 20%;
+}
+
+.our-contacts .location p{
+    padding-left: 20px;
+}
+
+.sayhello{
+    background: url(/img/contact-bg.png);
+    padding-top: 20px;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+}
 
 
+.sayhello h2, .sayhello p{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.sayhello .field-group {
+    display: flex;
+    flex-direction: column; /* Лейбл сверху, инпут снизу */
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    margin: 0 auto;
+    
+}
+
+.sayhello .full-name input{
+    width: 100%;
+    
+    
+}
+.sayhello .full-name {
+    display: flex;
+    flex-direction: row;
+}
+
+.sayhello .full-name .fname{
+    display: flex;
+    flex-direction: column;
+}
+.sayhello .full-name .lname{
+    display: flex;
+    flex-direction: column;
+    margin-left: 120px;
+}
 
 
+.sayhello .field-group label {
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #b3b3b3;
+}
+
+.sayhello input, 
+.sayhello textarea {
+    background:rgba(255, 255, 255, 0.07);
+    color: #fff;
+    border: 1px solid #cecece64;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+.sayhello textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Кнопка */
+.sayhello .btn {
+    width: 11%;
+    margin-right: 30%;
+    background-color: #FA9021;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color .2s ease;
+    margin-top: 20px;
+}
+
+.sayhello .btn:hover {
+    background-color: #b15b00;
+}
+
+.sayhello .orange{
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 1;
+}
+
+.sayhello .white{
+    position: absolute;
+    bottom:0;
+    z-index: 1;
+}
