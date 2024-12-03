@@ -10,18 +10,7 @@
 
 <body>
     <div class="awrapper">
-        <header class="container">
-            <span class="logo">LOGO</span>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active"><a href="about.html">About us</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li class="btn"><a href="contacts.html">Contacts</a></li>
-                </ul>
-            </nav>
-        </header>
+        <?php  require_once "blocks/header.php"; ?>
         <div class="container ahero">
             <div class="ahero--info">
                 <span>Home ></span><span class="currentpage">About us</span>
@@ -31,7 +20,7 @@
                 <a href="" class="btn">Get in touch <img src="img/btnarr.png"></a>
             </div>
             <div class="slider">
-                <img src="/img/aboutimg.png" alt="">
+                <img src="img/aboutimg.png" alt="">
             </div>
         </div>
         <div class="container reason">
@@ -105,37 +94,14 @@
                     <p>Subscribe to receive the latest news and updates about TDA.
                         We promise not to spam you! </p>
                 </div>
-                <div>
+                <div class="input-wrappe">
                     <input type="email" placeholder="Enter email address">
                     <button type="submit">Continue</button>
                 </div>
             </div>
         </div>
     </div>
-    <footer>
-        <div class="blocks container">
-            <div>
-                <span class="logo">LOGO</span>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-            </div>
-            <div>
-                <h4>About us</h4>
-                <ul>
-                    <li>Zeux</li>
-                    <li>Portfolio</li>
-                    <li>Careers</li>
-                    <li>Contact us</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Contact us</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                <p>+908 89097 890</p>
-            </div>
-        </div>
-        <hr>
-        <p>Copyright ® 2021 Lorem All rights Rcerved</p>
-    </footer>
+    <?php require_once "blocks/footer.php"; ?>
 
 </body>
 

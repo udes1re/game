@@ -10,6 +10,8 @@ body {
     font-weight: 400;
     color:#fff;
     font-size: 16px;
+    max-width: 1650px;
+    overflow-x: hidden;   
 }
 
 a {
@@ -24,29 +26,35 @@ img {
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(74,40,0,1) 100%);
     width: 100%;
     overflow-x:hidden;
+
 }
 
 .container {
-    width: 1400px ;
+    width: 90% ;
     margin: 0 auto;
+    padding: 0 50px;
 }
 
-header{
+header {
     padding: 50px 0;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header .logo, footer .blocks .logo{
+header .logo, footer .blocks .logo {
     font-size: 29px;
     font-weight: 800;
 }
 
 header nav {
-    float: right;
+    float: none;
     width: 50%;
+    display: flex;
+    justify-content: flex-end;
 }
 
-header nav ul{
+header nav ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -54,16 +62,17 @@ header nav ul{
     z-index: 2;
 }
 
-header nav ul li{
+header nav ul li {
     display: inline-block;
+    padding-left: 20px;
 }
 
-header nav ul li a{
-    color:#fff;
-    transition: all .2s ease;
+header nav ul li a {
+    color: #fff;
+    transition: all 0.2s ease;
 }
 
-header nav ul li.active::after{
+header nav ul li.active::after {
     content: '';
     display: block;
     width: 40px;
@@ -71,22 +80,22 @@ header nav ul li.active::after{
     background: #DC7000;
     border-radius: 10px;
     position: relative;
-    top:2px; 
+    top: 2px;
     left: -15px;
 }
 
-header nav ul li:not(.active):not(.btn) a:hover{
+header nav ul li:not(.active):not(.btn) a:hover {
     border-bottom: 5px solid #DC7000;
 }
 
-header nav li.btn a{
+header nav li.btn a {
     background: #FA9021;
     padding: 9px 17px;
     border-radius: 5px;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
 }
 
-header nav li.btn a:hover{
+header nav li.btn a:hover {
     background: #b15b00;
 }
 
@@ -97,7 +106,7 @@ header nav li.btn a:hover{
 }
 
 .hero--info{
-    width: 500px;
+    width: 40%;
     padding-top: 70px;
 }
 
@@ -186,7 +195,7 @@ header nav li.btn a:hover{
     font-weight: 600;
     font-size: 35px;
     padding: 50px 0;
-    width: 800px;
+    width: 50%;
     text-align: center;
 }
 
@@ -203,7 +212,7 @@ header nav li.btn a:hover{
 .banner p{
     line-height: 187.5%;
     margin-bottom: 30px;
-    width: 550px;
+    width: 30%;
 }
 
 .banner img{
@@ -212,7 +221,7 @@ header nav li.btn a:hover{
 }
 
 .features{
-    background: url('/img/BG.png') no-repeat center center fixed;
+    background:url('../img/BG.png') no-repeat center center fixed;
     background-size: cover;
     padding: 80px 0;
 }
@@ -250,11 +259,11 @@ header nav li.btn a:hover{
     margin-bottom: 30px;
 }
 
-.projects{
+.projects {
     padding: 100px 0;
 }
 
-.projects h3{
+.projects h3 {
     font-weight: 600;
     font-size: 30px;
     max-width: 497px;
@@ -263,7 +272,7 @@ header nav li.btn a:hover{
     margin-bottom: 20px;
     text-align: center;
 }
-.projects p{
+.projects p {
     max-width: 497px;
     margin-left: auto;
     margin-right: auto;
@@ -272,23 +281,24 @@ header nav li.btn a:hover{
     line-height: 187.5%;
 }
 
-.projects .images{
+.projects .images {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Добавлено для отзывчивости */
     margin-bottom: 20px;
 }
-.projects .images img{
-    margin-left: 20px;
+.projects .images img {
+    margin: 10px; /* Увеличено для симметрии */
 }
 
-.projects .see-all{
+.projects .see-all {
     float: none;
-    width: 60px;
+    width: auto; /* Изменено для центрирования на узких экранах */
     text-align: center;
     margin: 0 auto;
 }
 
-.email{
+.email {
     padding-bottom: 120px;
 }
 .email h3 {
@@ -303,48 +313,74 @@ header nav li.btn a:hover{
     padding: 40px 3%;
     width: 94%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
-.email .block h4{
+.email .block h4 {
     font-size: 30px;
     font-weight: 500;
-}
-.email .block p{
-    margin-top: 10px;
-    width: 500px;
+    text-align: center;
 }
 
-.email .block input{
+.email .block p {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.email .block .input-wrappe {
+    position: relative;
+    width: 100%; /* Устанавливаем ширину контейнера */
+    max-width: 500px; /* Ограничиваем максимальную ширину */
+}
+
+.email .block input {
     background: #fff;
     outline: none;
     border: 0;
     border-radius: 5px;
-    width: 380px;
+    width: 100%; /* Поле занимает весь контейнер */
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     padding: 20px 30px;
-    position: relative;
-    right: -150px;
-    z-index: 1;
-    padding-right: 180px;
-
+    padding-right: 120px; /* Отступ для кнопки */
+    box-sizing: border-box; /* Учитываем padding в ширине */
 }
-.email .block input::placeholder{
+
+.email .block input::placeholder {
     color: #898989;
 }
-.email .block button{
+
+.email .block button {
+    position: absolute;
+    top: 50%; /* Центрируем кнопку вертикально */
+    right: 10px; /* Отступ справа */
+    transform: translateY(-50%); /* Смещаем кнопку вверх на половину её высоты */
     border-radius: 5px;
-    border:0;
-    position: relative;
+    border: 0;
+    padding: 10px 20px;
+    background-color: #FA8305; /* Цвет кнопки */
+    color: #fff; /* Цвет текста */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
     z-index: 2;
+    transition: all .2s ease;
 }
+
+.email .block button:hover{
+    background-color: #b15b00;
+}
+
 
 footer {
     background: #000;
     padding: 50px 0;
 }
+
 footer .blocks{
     display: flex;
     justify-content: space-between;
@@ -352,7 +388,7 @@ footer .blocks{
 }
 
 footer .blocks p{
-    width: 300px;
+    width: 80%;
     padding: 15px 0 ;
 }
 
@@ -422,10 +458,10 @@ footer p{
     background: #b15b00;
 }
 .ahero .slider{
-    float: right;
+    
     position: absolute;
-    top: 0;
-    right: -150px;
+    top: 2%;
+    right: -5%;
 }
 .reason{
     margin-top: 100px;
@@ -499,13 +535,13 @@ footer p{
 
 .part .info p{
     font-size: 15px;
-    width: 536px;
+    width: 70%;
 }
 .part .info h3{
     padding: 30px 0;
     font-size: 28;
     font-weight: 700;
-    width: 536px;
+    width: 70%;
 }
 
 .team{
@@ -549,14 +585,16 @@ footer p{
 .hero-portfolio .blocks .vertical-line{
     border-left: 1px solid white ;
     height: 100px;
+    display: block;
 }
 
 .hero-portfolio .blocks .block{
     display: flex;
     align-items: center;
+   
 }
 .hero-portfolio .blocks .block .text{
-    margin-left: 20px;
+    margin-left: 2%;
 }
 .hero-portfolio .blocks .block .text h4{
     display: flex;
@@ -818,6 +856,7 @@ footer p{
 .news-info .small-blocks .small-block:nth-of-type(6) .colored{
     background: #2351F5;
 }
+
 .news-info .small-blocks .small-block:nth-of-type(7) .colored {
     background: #9921C3;
 }
@@ -887,7 +926,7 @@ footer p{
 }
 
 .sayhello{
-    background: url(/img/contact-bg.png);
+    background: url(../img/contact-bg.png);
     padding-top: 20px;
     padding-bottom: 100px;
     position: relative;
@@ -970,6 +1009,7 @@ footer p{
     font-size: 1rem;
     transition: background-color .2s ease;
     margin-top: 20px;
+    z-index: 2;
 }
 
 .sayhello .btn:hover {
@@ -988,3 +1028,403 @@ footer p{
     bottom:0;
     z-index: 1;
 }
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 10px;
+    }
+    header .logo {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    header nav {
+        width: 100%;
+    }
+    header nav ul {
+        flex-direction: column; /* Вертикальное расположение */
+        align-items: flex-start;
+        display: none; /* Скрыто по умолчанию */
+       
+        padding: 10px 20px;
+        border-radius: 5px;
+        width: 100%;
+        margin-top: 10px;
+    }
+    header nav ul.active { /* Показываем меню, когда добавляется класс active */
+        display: flex;
+    }
+    header nav ul li {
+        margin-bottom: 10px;
+    }
+    header nav ul li a {
+        font-size: 18px;
+    }
+    .hamburger {
+        display: block; /* Показываем кнопку на мобильных */
+        cursor: pointer;
+        position: relative;
+        z-index: 3;
+    }
+    .hamburger div {
+        width: 30px;
+        height: 3px;
+        background: #fff;
+        margin: 6px 0;
+        transition: 0.3s;
+    }
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .hero img{
+        display: none;
+    }
+
+    .hero--info {
+        width: 100%;
+    }
+
+    
+
+    .trending h3 {
+        font-size: 25px;
+    }
+
+    .trending .games {
+        flex-wrap: wrap;
+
+    }
+    
+    .trending .games img{
+        transform: scale(0.8);
+    }
+
+    .banner p {
+        width: 70%;
+    }
+
+    .big-text {
+
+        width: 80%;
+        font-size: 25px;
+    }
+
+    .features .info .block {
+        width: 25%;
+        margin-left: 3%;
+    }
+
+    .email .block{
+        width: 85%;
+    }
+
+    footer .blocks p
+    {
+        
+        font-size: 10px;
+    }
+    
+    footer .blocks .foot:last-of-type h4, footer .blocks  span{
+        padding-left: 30px;
+        font-size: 14px;
+    }
+
+    .ahero .slider {
+        display: none;
+       
+    }
+
+    .reason .reasons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .reason .reasons .block {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .part .info p{
+        font-size: 10px;
+        width: 100%;
+    }
+
+    .part .info h3 {
+        font-size: 23px;
+        width: 100%;
+    }
+
+    .persons {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .persons .person {
+        margin-bottom: 20px;
+    }
+
+    .hero-portfolio .blocks {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .hero-portfolio .blocks .vertical-line {
+        margin: 0 60px;
+        display: none;
+        
+    }
+
+    .hero-portfolio .blocks .block {
+        margin-top: 20px;
+    }
+
+    .hero-portfolio .blocks .block .text{
+        padding: 0 20px;
+    }
+
+    .video{
+        flex-direction: column;
+        
+    }
+
+    .video .text{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .video .text .main-text{
+        width: 80%;
+    }
+
+    .video .text .main-text p{
+        width: 20%;
+    }
+
+    .video .text .list  {
+        width:50%;
+        padding-left: 40%;
+       
+        display: flex;
+        justify-content: space-between;
+       
+        flex-direction: column;
+        
+    }
+   
+    .video .text .list .apply {
+        padding-top: 20px;
+        width: 10%;
+    }
+    .video .text .list .apply {
+        display: flex;
+        
+        font-size: 10px;
+        width: 100%;
+    }
+    .video .text .list  p{
+        width: 200px;
+    }
+
+    .slides {
+        flex-direction: column;
+        padding-bottom: 60px;
+    }
+
+    .slides .slide {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .slides .slide .profile .info p {
+        font-size: 9px;
+    }
+    
+    .slides .slide .profile h4{
+        font-size: 14px;
+    }
+
+    .slides .slide .profile :first-of-type .rate{
+        padding-top: 20px;
+    }
+
+    .slides .slide .feedback {
+        font-size: 8px;
+    }
+
+    
+    
+    .prolet .arrows {
+        display: none;
+    }
+
+    .news-hero h1, .news-hero p{
+        margin-top: 10px;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .news-info{
+        flex-direction: column;
+    }
+
+    .news-info .big-blocks {
+        width: 90%;
+    }
+
+    .news-info .small-blocks {
+        width: 100%;
+    }
+    .news-info .small-blocks .small-block h3{
+        font-size: 20px;
+    }
+
+    .our-contacts{
+        transform: scale(0.6);
+    }
+
+    .our-contacts .number{
+       
+        width: 40%;
+    }
+
+    .our-contacts .number p{
+        font-size: 15px;
+    }
+
+    .our-contacts .location p{
+        font-size: 15px;
+    }
+
+    .sayhello form {
+        width: 80%;
+    }
+
+    .sayhello .btn {
+        width: 40%;
+        z-index: 2;
+        position: relative;
+    }
+    
+}
+
+@media (max-width:1200px){
+
+    .hero img{
+        transform: scale(0.68);
+        right: -200px;
+        top: -170px;
+        
+    }
+
+    .hero--info h1 {
+        font-size: 18px;
+    }
+
+    .trending .games {
+        flex-wrap: wrap;
+    }
+
+    .trending .games .img{
+        padding-top: 20px;
+    }
+
+    .big-text {
+        font-size: 20px;
+    }
+
+    .banner h3{
+        font-size: 18px;
+    }
+
+    .banner p{
+        width: 80%;
+        font-size: 15px;
+    }
+
+    .ahero .slider {
+        transform: scale(0.5);
+        right:-30%;
+        top: -10%;
+    }
+
+    .persons .person{
+        padding: 20px 40px;
+        margin-left: 10px;
+        
+    }
+
+    .hero-portfolio{
+        padding-top: 20px;
+    }
+
+    .hero-portfolio .blocks{
+        width: 40%;
+        justify-content: center;
+        
+    }
+    .hero-portfolio .block .vertical-line{
+        
+    }
+    .hero-portfolio .blocks .block{
+        margin-right: 100px;
+        margin-left: 20px;
+        width: 20%;
+    }
+
+    .hero-portfolio .blocks .block .text{
+        padding-left: 10px;
+    }
+
+    .video {
+        flex-direction: column;
+    }
+
+    .slides .slide .feedback{
+        font-size: 12px;
+    }
+    .slides .slide{
+        margin-left: 10px;
+    }
+
+    .search-icon{
+        display: none;
+    }
+
+    .news-info{
+        flex-direction: column;
+    }
+    
+    .news-info .big-blocks {
+        width: 90%;
+    }
+
+    .news-info .small-blocks {
+        width: 90%;
+    }
+
+    .our-contacts .number p{
+        font-size: 15px;
+    }
+
+    .our-contacts .location p{
+        font-size: 15px;
+    }
+    
+    .sayhello .btn{
+        width: 30%;
+        position: relative;
+        z-index: 2;
+    }
+
+}
+
